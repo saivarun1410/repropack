@@ -1,0 +1,24 @@
+{
+  "name": "repropack",
+  "version": "0.1.0",
+  "description": "Capture, share, inspect, and replay command-line bug reproductions",
+  "type": "module",
+  "bin": { "repropack": "./bin/repropack.js" },
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": { "types": "./src/index.d.ts", "default": "./src/index.js" }
+  },
+  "files": ["bin", "src", "docs", "README.md", "CONTRIBUTING.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/index.js && node --check bin/repropack.js && node --test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "repository": { "type": "git", "url": "git+https://github.com/saivarun1410/repropack.git" },
+  "homepage": "https://github.com/saivarun1410/repropack#readme",
+  "bugs": "https://github.com/saivarun1410/repropack/issues",
+  "keywords": ["reproduce", "bug-report", "debugging", "cli", "diagnostics", "replay", "developer-tools"],
+  "license": "MIT"
+}
